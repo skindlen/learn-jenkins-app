@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             agent {
                 image 'node:18-alpine'
-                resuedNode Tru
+                resuedNode True
             }
             steps {
                 sh '''
