@@ -21,7 +21,10 @@ pipeline {
             }
         }
         stage('Test') {
-            npm test
+            steps {
+                npm test
+            }
+            
         }
     }
 }
