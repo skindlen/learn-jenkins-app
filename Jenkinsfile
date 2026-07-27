@@ -39,7 +39,7 @@ pipeline {
             
         }
 
-        stage('JUNIT Test') {
+        stage('E2E') {
             agent {
                docker {
                 image 'mcr.microsoft.com/playwright:v1.62.0-noble'
