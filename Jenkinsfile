@@ -56,9 +56,9 @@ pipeline {
             steps {
                 sh '''
                     npm install serve
-                    npx serve -s build -l 3000 &
+                    node_modules/.bin/serve -s build &
                     sleep 10
-                    npx playwright test --reporter=html
+                    npx playwright test  --reporter=html
                 '''    
             }
             post {
@@ -78,8 +78,8 @@ pipeline {
             }
             steps {
                 sh '''
-                npm install -g netlify-cli -g
-                netlify --version
+                npm install -g netlify-cli
+                node_modules/.bin/netlify --version
                 '''
             }
         }
