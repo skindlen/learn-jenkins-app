@@ -18,7 +18,7 @@ pipeline {
             }
             steps {
                 sh '''
-                echo 'small change'
+                echo 'this is a new line'
                 ls -la
                 node --version
                 npm --version
